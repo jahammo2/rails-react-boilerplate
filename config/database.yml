@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: spotify_playlist_creator_development
+
+test:
+  <<: *default
+  database: spotify_playlist_creator_test<%= ENV['TEST_ENV_NUMBER'] %>
+  host: <%= ENV["POSTGRES_HOST"] %>
+  username: <%= ENV["POSTGRES_USER"] %>
+  password: <%= ENV["POSTGRES_PASSWORD"] %>
+
+production:
+  <<: *default
+  database: spotify_playlist_creator_production

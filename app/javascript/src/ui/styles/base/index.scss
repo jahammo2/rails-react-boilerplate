@@ -1,0 +1,72 @@
+@import "../mixins/index.scss";
+@import "../variables/index.scss";
+
+/* stylelint-disable selector-id-pattern, selector-max-id, selector-max-specificity */
+.Root,
+#root,
+html,
+body {
+  background-color: $color--white;
+  flex: 1;
+  margin: 0;
+}
+/* stylelint-enable selector-id-pattern, selector-max-id, selector-max-specificity */
+
+* {
+  color: $color--black;
+  font-family: "Helvetica", serif;
+  font-size: $font-size--med;
+  font-weight: normal;
+  line-height: $font-size--med * 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h2 {
+  font-size: $font-size--lg;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: $font-size--med;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  border-width: 0;
+}
+
+input {
+  border-radius: 0;
+}
+
+input[type="search"],
+input[type="text"],
+textarea[type="textarea"] {
+  -webkit-appearance: none; // stylelint-disable-line property-no-vendor-prefix
+}
+
+textarea {
+  margin-bottom: 0;
+  vertical-align: bottom;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: $font-size--med;
+  font-weight: normal;
+  margin: 0;
+}

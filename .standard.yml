@@ -1,0 +1,3 @@
+ignore:
+  - 'config/environments/production.rb'
+  - 'config/puma.rb'
